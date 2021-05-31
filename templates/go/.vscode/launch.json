@@ -1,0 +1,14 @@
+{
+  "configurations": [
+      {
+          "name": "Go: Debug WASM",
+          "type": "shell",
+          "request": "launch",
+          "program": "make",
+          "args": ["debug"],
+          "cwd": "${workspaceFolder}",
+          "sourceLanguages": ["go"],
+          "preLaunchTask": "Go: Build WASM"
+    }
+]
+}

@@ -9,6 +9,7 @@ import { noRegistry } from './providers/none';
 import { Language } from './languages/language';
 import { rust } from './languages/rust';
 import { clang } from './languages/c';
+import { go } from './languages/go';
 import { assemblyScript } from './languages/assembly-script';
 import { failed } from './utils/errorable';
 import { swift } from './languages/swift';
@@ -51,6 +52,7 @@ module.exports = class extends Generator {
         choices: [ // In alphabetical order
           'AssemblyScript',
           'C',
+          'Go',
           'Rust',
           'Swift'
         ],
@@ -159,6 +161,8 @@ function languageProvider(language: string): Language {
       return assemblyScript;
     case 'C':
       return clang;
+    case 'Go':
+      return go;
     case 'Swift':
       return swift;
     default:
